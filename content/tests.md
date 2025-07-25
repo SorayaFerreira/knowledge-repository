@@ -17,8 +17,7 @@ tags:
 # Anotações das Aulas 📝
 **Anotações da Disciplina de Verificação, Validação e Teste de Software**  
 
-
-### REVISÃO, INSPEÇÃO E CONCEITOS
+## REVISÃO, INSPEÇÃO E CONCEITOS
 
 * Aprovação de PR sem comentário é uma revisão inválida. Precisa haver evidências de que vc revisou aquilo.  
 * **Verificação:** analisar se o produto de software está sendo desenvolvido da maneira correta. *Are we building the software right?*  
@@ -51,7 +50,7 @@ tags:
   * **aceitação:** foco nos requisitos, testes funcionais, o sistema satisfaz ou não seus critérios de aceitação.  
   * **fumaça:** é uma estratégia de integração incremental. O sistema é reconstruído com novos componentes incorporados e é exercitado diariamente.
 
-### CASOS DE TESTE
+## CASOS DE TESTE
 
 * Um **incremento** é algo funcional que vai para produção. Os testes devem ser sempre rastreáveis com os requisitos.  
 * Nosso curso é chamado *Engenharia,* porque é sistemática e quantificável e depende muito de processo.  
@@ -72,7 +71,7 @@ tags:
   * Bottom-up: módulos de nível mais baixo, ou seja, que não dependem um do outro. Módulo só é integrado quando os dependentes já foram integrados e testados. Não é necessário escrever stubs.  
   * Top-down: módulos de nível mais alto, verificando inicialmente os módulos com mais importância precisa de bons e vários stubs.
 
-### ESTRATÉGIAS DE TESTE
+## ESTRATÉGIAS DE TESTE
 
 * Na sprint 0, você precisa definir uma estratégia de testes, de verificação e de validação, analisando o documento de requisitos, a complexidade do domínio e o nível de maturidade da equipe. Essa estratégia precisa ser eficaz e sistemática.  
 * **fitness function/função objetivo**: é   
@@ -90,7 +89,7 @@ tags:
 * Utiliza árvores de decisão.  
 * Se um requisito é muito simples, não precisa utilizar um recurso de infraestrutura.
 
-### TESTES \- PRÁTICA
+## TESTES \- PRÁTICA
 
 * A **estratégia de qualidade** abrange a estratégia de testes.  
 * É importante modelar visualmente a estratégia de testes para que o time tenha total compreensão.  
@@ -101,7 +100,7 @@ tags:
 * O Selenium é antigão e mais manual. O Cypress permite automatizar melhor algumas coisas, ele é voltado para testes end-to-end.  
 * Todo elemento do HTML está estruturado numa árvore chamada DOM. É com ele que a gente interage. O ID é o filtro para busca mais rápido, é quase instantâneo.
 
-### GERENCIAMENTO DE DEFEITOS
+## GERENCIAMENTO DE DEFEITOS
 
 * No NES, eles têm percebido que, se o time não entende a arquitetura muito bem, eles não conseguem fazer testes unitários e de integração.  
 * Como a gente prioriza os testes unitários? R.: tem que ter entendimento do negócio, do que é a entrega, os critérios de teste, o objetivo da sprint.  
@@ -134,7 +133,7 @@ tags:
 * Não adianta nada as ferramentas serem boas se vocês não são bons profissionais.  
 
 
-### PROJETANDO PARA TESTABILIDADE
+## PROJETANDO PARA TESTABILIDADE
 
 * Serve para saber se algo é testável.  
 * É o grau em que um sistema de software ou uma unidade sob teste suporta seu próprio teste. É a capacidade de um artefato de software (sistema, módulo, requisitos ou documento de design)  
@@ -262,7 +261,11 @@ A diferença entre Verificação e Validação é a ordem das duas últimas pala
 - Pode ser usado para web scraping.
 - É preciso ter um projeto com node.js (npm init) antes de tentar instalar o playwright.
 
-# try...catch
+# try...catch 🆚 Results
+
+- O `results.ts` é uma abordagem diferente para tratamentos de erros e exceções. 
+- Nesse caso, estamos utilizando TypeScript, mas tal abordagem pode surgir em várias linguagens diferentes, como o Golang, por exemplo. 
+- A ideia do results.ts gera algo muito elegante, que é melhor detalhado no arquivo [js_ts.ipnynb](./js_ts.ipynb).
 
 ```javascript
 try {
@@ -270,6 +273,7 @@ try {
 
 } catch (error) {
     console.error(error);
+
 } finally {
     // padrões executados independente de ter entrado no try ou no catch.
 }
