@@ -212,7 +212,10 @@ Uma desvantagem que ele apresenta é não suportar todos os pacotes possíveis.
 
 - **Single-Tenant**: provê um tenant com apenas uma instância; geralmente oferece mais custo, pois os recursos são dedicado, exclusivos; isola dados de tenants através de infraestrutra privada; depende do operador para manutenção.
 
-
+# Serviços Web
+- Geralmente são utilizados por outras aplicações web como fontes de dados.
+- Aplicação web != Serviço web.
+- 
 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=footer"/>

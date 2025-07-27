@@ -291,4 +291,55 @@ try {
 }
 ```
 
+# Para um Plano de Testes ✏️📄
+> Tudo que é necessário para criação de um Plano de Testes, conforme Awdren:
+
+## 1. Contextualização do Projeto
+- Qual é o objetivo principal do sistema?
+- Quem são os usuários finais desse sistema?
+- Esse módulo faz parte de qual etapa do processo de negócio?
+
+## 2. Descrição do Módulo a ser Testado
+- Qual é a funcionalidade principal do módulo?
+-  Quais são as entradas esperadas e saídas produzidas?
+- Existem pré-condições ou dependências com outros módulos ou serviços externos?
+- Há alguma interface com o usuário? Se sim, qual é o fluxo esperado?
+
+## 3. Requisitos e Regras de Negócio
+- Quais são os principais requisitos funcionais do módulo?
+- Existem regras de negócio críticas que precisam de atenção especial?
+- Quais são os cenários que obrigatoriamente devem ser testados?
+- Há casos de uso prioritários ou que envolvem lógica sensível?
+
+## 4. Critérios de Aceitação e Qualidade
+- O que caracteriza que o módulo está funcionando corretamente?
+- Existem critérios não funcionais a serem considerados (ex: desempenho, segurança,
+usabilidade)?
+- Quais são os critérios mínimos de aceitação para que o módulo seja considerado
+pronto?
+
+## 5. Riscos e Áreas Críticas
+- Quais partes do módulo são mais propensas a falhas ou exigem mais atenção?
+- Há alterações recentes ou funcionalidades novas que precisam ser priorizadas nos
+testes?
+- Existem dados sensíveis ou integrações externas a serem validadas?
+
+## 6. Ambiente e Dados de Teste
+- Em qual ambiente o time de QA realizará os testes (homologação, staging, etc.)?
+- Que tipos de dados estarão disponíveis para os testes (reais, fictícios,
+anonimizados)?
+- Existem configurações específicas ou permissões que o time de QA precisa
+conhecer?
+
+## 7. Automação e Suporte ao QA
+- Já existem testes automatizados para este módulo? Se sim, quais?
+- O time de desenvolvimento poderá fornecer mocks, scripts ou dados de apoio para
+os testes?
+- Há logs, dashboards ou ferramentas auxiliares disponíveis para acompanhamento? 
+
+## 8. Acordos de Comunicação e Feedback
+- Quem será o ponto de contato para dúvidas ou alinhamentos?
+- Como será feito o registro, triagem e priorização de defeitos encontrados?
+- Qual o prazo estimado para a execução dos testes e para o retorno das análises?
+
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=footer"/>

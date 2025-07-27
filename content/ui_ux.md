@@ -39,7 +39,7 @@ tags:
  
 - **O que é design token-based UI architecture?** R.: dá pra usar para geração de código automático. São decisões de design representadas como dados, sendo blocos de fundação para o design de sistemas. _São variáveis JSON  ou YAML que vão guardar padrões de design para diferentes elementos_.
 
-### Atomic Design
+# Atomic Design
 Atomos combinados juntos formam molécular. Moléculas combinadas podem se combinar e formar organismos complexos.
 Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo tem suas propriedades, suas partes, e se ele for despedaçado, ele perde sua essência principal.
 - Atoms: labels, inputs, buttons etc
@@ -49,5 +49,17 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 ![templates](https://atomicdesign.bradfrost.com/images/content/template.png)
 
 - Pages: instâncias de modelos que mostram a aparência de uma interface de usuário com conteúdo representativo real.
+
+# React
+- O React fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
+- Para dar estilo, podemos utilizar bibliotecas como Bootstrap, Tailwind, entre outras;
+- Alguns termos ainda me geram dúvida sobre sua função e relação entre as ferramentas supracitadas: Radix UI, shadcn/ui, Tailwind, Origin UI;
+- O [Origin UI](https://originui.com/) e o [Kibo UI](https://originui.com/) são _projetos_ que utilizam componentes primitivos do **shadcn/ui** em seus próprios componentes.
+- O shadcn/ui é equivalente ao bootstrap e ao tailwind, a diferença é que nele você faz um "download" do componente para seu projeto e, então, você tem total controle sobre os componentes, podem fazer as alterações que quiser.
+- Radix IU é uma biblioteca de componentes React que te ajuda a construir coisas como dropdowns, dialogs, entre outras coisas. Ele não vem com estilização, apenas com o comportamento. Então é você quem estiliza e, para isso, você pode usar outras bibliotecas.
+- O shadcn/ui é rápido de utilizar, flexível, leve, simples e feito especificamente para o React. Um dos diferenciais dele é que os componentes são customizáveis, ao contrário do Tailwind e do Material UI
+- Atualmente, a forma mais recomendada de se construir interfaces com React é utilizando o Radix UI e o shadcn/ui.
+- Libs que o shadcn recomenda como alternativas: [ariakit](https://ariakit.org/), [React Aria](https://react-spectrum.adobe.com/react-aria/index.html).
+- Quando você for importar um componente, é interessante investigar de quais outras libs ele depende e se elas são confiáveis.
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>
