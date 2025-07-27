@@ -51,6 +51,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Pages: instâncias de modelos que mostram a aparência de uma interface de usuário com conteúdo representativo real.
 
 # React
+- [React learn](https://react.dev/learn) é muito legal.
 - O React fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
 - Para dar estilo, podemos utilizar bibliotecas como Bootstrap, Tailwind, entre outras;
 - Alguns termos ainda me geram dúvida sobre sua função e relação entre as ferramentas supracitadas: Radix UI, shadcn/ui, Tailwind, Origin UI;
@@ -61,5 +62,15 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Atualmente, a forma mais recomendada de se construir interfaces com React é utilizando o Radix UI e o shadcn/ui.
 - Libs que o shadcn recomenda como alternativas: [ariakit](https://ariakit.org/), [React Aria](https://react-spectrum.adobe.com/react-aria/index.html).
 - Quando você for importar um componente, é interessante investigar de quais outras libs ele depende e se elas são confiáveis.
+
+- **Componente**: é um pedaço da UI que tem sua própria lógica e aparência. Ele pode ser tão grande quanto uma página da web, ou tão pequeno quanto um botão.
+- ano, achei loko isso. Um componente react é uma função javascript que retorna um _markup_ um HTML. Daí você pega e chama essa função dentro de tags (`< />`) como se fosse um elemento HTML mesmo.
+- O nome dos componentes têm que começar com letra maiúscula.
+- [Detalhes do JSX](https://react.dev/learn#writing-markup-with-jsx).
+- O atributo `class` do react é o `className`, mas funciona do mesmo jeito.
+- Você pode usar `{}` no meio dos elementos html para colocar coisa em javascript.
+- Ou também dá pra fazer o contrário e colocar HTML  
+
+
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>
