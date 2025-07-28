@@ -62,3 +62,23 @@ coverage/
 *.tmp
 *.temp
 temporary.*
+
+# Test coverage
+.nyc_output/
+
+# Editor directories and files
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/*.code-workspace
+
+# Media/assets that shouldn't be tracked
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.webm
+
+# Backup files
+*.bak
+*.backup
+*~
