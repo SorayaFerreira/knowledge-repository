@@ -82,3 +82,51 @@ temporary.*
 *.bak
 *.backup
 *~
+
+# TypeScript/JavaScript specific
+*.tsbuildinfo
+.eslintcache
+
+# Package manager directories
+.pnpm-store/
+.yarn/
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Runtime and cache
+.cache/
+.parcel-cache/
+
+# Documentation build
+docs/build/
+docs/.docusaurus/
+
+# Local development
+.local/
+local.properties
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows specific
+desktop.ini
+$RECYCLE.BIN/
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
