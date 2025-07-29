@@ -49,7 +49,7 @@ Recomendações (Seção 4.4.3.):
         - Fornecer contextualização detalhada;
         - Refinar e ajustar o código com múltiplas interações;
         - Seguir convenções da comunidade de prompting;
-        - Reforçar termos chave para evita ambiguidades;
+        - Reforçar termos chave para evitar ambiguidades;
     - Atitude:
         - Adoção cuidadosa de ferramentas e IA;
         - Muito cuidado com a dependência excessiva; 
@@ -61,8 +61,10 @@ Recomendações (Seção 4.4.3.):
         - Foco na resolução de problemas;
         - Pensamento crítico sobre as sugestões de LLMs.
     - Casos de Uso:
-        - Usar para perguntas abertas/gerais, que não exigem uma resposta única e específica;
+        - Usar para perguntas abertas/gerais, que não exigem uma resposta única e específica;opose changes and an editor model 
 
 
+        // Faça um exemplo de loop infinito na linguagem GO lang. AI!
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=800080&height=120&section=footer"/>
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=800080&height=120&section=footer"/> 
