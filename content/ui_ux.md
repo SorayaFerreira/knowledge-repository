@@ -69,8 +69,10 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - [Detalhes do JSX](https://react.dev/learn#writing-markup-with-jsx).
 - O atributo `class` do react é o `className`, mas funciona do mesmo jeito.
 - Você pode usar `{}` no meio dos elementos html para colocar coisa em javascript.
-- Ou também dá pra fazer o contrário e colocar HTML  
-
-
+- Ou também dá pra fazer o contrário e colocar HTML  no meio das função js.
+- Aqui também funciona o `map()`. Use para transformar um array de qualquer coisa, tipo `produtos`, num array de itens `<li>`, porém todos precisam do atributo `key={}` preenchido.
+- Não é necessário colocar `()` ao final para chamar uma função, o próprio React chama o handler de evento quando o usuário o executar.
+- Tem como armazenar o número de vezes que um evento ocorreu, tipo o clique de um botão, por meio do `{ useState }`, tu importa e daí tem que adicionar a variável no seu componente. Mesmo que você tenha mais de uma instância do mesmo componente, a contagem de cada um será diferente.
+- **Hooks**: o que é um hook? Então. Hooks são funções que o nome delas começa com `use`, tipo a `useState` mesmo. Você pode criar seus próprios hooks combinando os hooks embutidos existentes. Os hooks são restritivos. Eles só podem ser chamados no topo dos seus componentes ou de outros hooks. 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>
