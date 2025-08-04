@@ -17,8 +17,7 @@ tags:
 # Anotações das Aulas 📝
 **Anotações da Disciplina de Verificação, Validação e Teste de Software**  
 
-
-### REVISÃO, INSPEÇÃO E CONCEITOS
+## REVISÃO, INSPEÇÃO E CONCEITOS
 
 * Aprovação de PR sem comentário é uma revisão inválida. Precisa haver evidências de que vc revisou aquilo.  
 * **Verificação:** analisar se o produto de software está sendo desenvolvido da maneira correta. *Are we building the software right?*  
@@ -51,7 +50,7 @@ tags:
   * **aceitação:** foco nos requisitos, testes funcionais, o sistema satisfaz ou não seus critérios de aceitação.  
   * **fumaça:** é uma estratégia de integração incremental. O sistema é reconstruído com novos componentes incorporados e é exercitado diariamente.
 
-### CASOS DE TESTE
+## CASOS DE TESTE
 
 * Um **incremento** é algo funcional que vai para produção. Os testes devem ser sempre rastreáveis com os requisitos.  
 * Nosso curso é chamado *Engenharia,* porque é sistemática e quantificável e depende muito de processo.  
@@ -72,7 +71,7 @@ tags:
   * Bottom-up: módulos de nível mais baixo, ou seja, que não dependem um do outro. Módulo só é integrado quando os dependentes já foram integrados e testados. Não é necessário escrever stubs.  
   * Top-down: módulos de nível mais alto, verificando inicialmente os módulos com mais importância precisa de bons e vários stubs.
 
-### ESTRATÉGIAS DE TESTE
+## ESTRATÉGIAS DE TESTE
 
 * Na sprint 0, você precisa definir uma estratégia de testes, de verificação e de validação, analisando o documento de requisitos, a complexidade do domínio e o nível de maturidade da equipe. Essa estratégia precisa ser eficaz e sistemática.  
 * **fitness function/função objetivo**: é   
@@ -90,7 +89,7 @@ tags:
 * Utiliza árvores de decisão.  
 * Se um requisito é muito simples, não precisa utilizar um recurso de infraestrutura.
 
-### TESTES \- PRÁTICA
+## TESTES \- PRÁTICA
 
 * A **estratégia de qualidade** abrange a estratégia de testes.  
 * É importante modelar visualmente a estratégia de testes para que o time tenha total compreensão.  
@@ -101,7 +100,7 @@ tags:
 * O Selenium é antigão e mais manual. O Cypress permite automatizar melhor algumas coisas, ele é voltado para testes end-to-end.  
 * Todo elemento do HTML está estruturado numa árvore chamada DOM. É com ele que a gente interage. O ID é o filtro para busca mais rápido, é quase instantâneo.
 
-### GERENCIAMENTO DE DEFEITOS
+## GERENCIAMENTO DE DEFEITOS
 
 * No NES, eles têm percebido que, se o time não entende a arquitetura muito bem, eles não conseguem fazer testes unitários e de integração.  
 * Como a gente prioriza os testes unitários? R.: tem que ter entendimento do negócio, do que é a entrega, os critérios de teste, o objetivo da sprint.  
@@ -134,7 +133,7 @@ tags:
 * Não adianta nada as ferramentas serem boas se vocês não são bons profissionais.  
 
 
-### PROJETANDO PARA TESTABILIDADE
+## PROJETANDO PARA TESTABILIDADE
 
 * Serve para saber se algo é testável.  
 * É o grau em que um sistema de software ou uma unidade sob teste suporta seu próprio teste. É a capacidade de um artefato de software (sistema, módulo, requisitos ou documento de design)  
@@ -262,7 +261,11 @@ A diferença entre Verificação e Validação é a ordem das duas últimas pala
 - Pode ser usado para web scraping.
 - É preciso ter um projeto com node.js (npm init) antes de tentar instalar o playwright.
 
-# try...catch
+# try...catch 🆚 Results
+
+- O `results.ts` é uma abordagem diferente para tratamentos de erros e exceções. 
+- Nesse caso, estamos utilizando TypeScript, mas tal abordagem pode surgir em várias linguagens diferentes, como o Golang, por exemplo. 
+- A ideia do results.ts gera algo muito elegante, que é melhor detalhado no arquivo [js_ts.ipnynb](typescript.ipynb).
 
 ```javascript
 try {
@@ -270,6 +273,7 @@ try {
 
 } catch (error) {
     console.error(error);
+
 } finally {
     // padrões executados independente de ter entrado no try ou no catch.
 }
@@ -286,5 +290,56 @@ try {
   console.log(message); // "oops"
 }
 ```
+
+# Para um Plano de Testes ✏️📄
+> Tudo que é necessário para criação de um Plano de Testes, conforme Awdren:
+
+## 1. Contextualização do Projeto
+- Qual é o objetivo principal do sistema?
+- Quem são os usuários finais desse sistema?
+- Esse módulo faz parte de qual etapa do processo de negócio?
+
+## 2. Descrição do Módulo a ser Testado
+- Qual é a funcionalidade principal do módulo?
+-  Quais são as entradas esperadas e saídas produzidas?
+- Existem pré-condições ou dependências com outros módulos ou serviços externos?
+- Há alguma interface com o usuário? Se sim, qual é o fluxo esperado?
+
+## 3. Requisitos e Regras de Negócio
+- Quais são os principais requisitos funcionais do módulo?
+- Existem regras de negócio críticas que precisam de atenção especial?
+- Quais são os cenários que obrigatoriamente devem ser testados?
+- Há casos de uso prioritários ou que envolvem lógica sensível?
+
+## 4. Critérios de Aceitação e Qualidade
+- O que caracteriza que o módulo está funcionando corretamente?
+- Existem critérios não funcionais a serem considerados (ex: desempenho, segurança,
+usabilidade)?
+- Quais são os critérios mínimos de aceitação para que o módulo seja considerado
+pronto?
+
+## 5. Riscos e Áreas Críticas
+- Quais partes do módulo são mais propensas a falhas ou exigem mais atenção?
+- Há alterações recentes ou funcionalidades novas que precisam ser priorizadas nos
+testes?
+- Existem dados sensíveis ou integrações externas a serem validadas?
+
+## 6. Ambiente e Dados de Teste
+- Em qual ambiente o time de QA realizará os testes (homologação, staging, etc.)?
+- Que tipos de dados estarão disponíveis para os testes (reais, fictícios,
+anonimizados)?
+- Existem configurações específicas ou permissões que o time de QA precisa
+conhecer?
+
+## 7. Automação e Suporte ao QA
+- Já existem testes automatizados para este módulo? Se sim, quais?
+- O time de desenvolvimento poderá fornecer mocks, scripts ou dados de apoio para
+os testes?
+- Há logs, dashboards ou ferramentas auxiliares disponíveis para acompanhamento? 
+
+## 8. Acordos de Comunicação e Feedback
+- Quem será o ponto de contato para dúvidas ou alinhamentos?
+- Como será feito o registro, triagem e priorização de defeitos encontrados?
+- Qual o prazo estimado para a execução dos testes e para o retorno das análises?
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=footer"/>

@@ -8,8 +8,14 @@ tags:
   - Git
   - GitHub
   - Conventional Commits
+  - GCS
+  - CI/CD
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=8a0303&height=120&section=header"/>
+
+# Sumário
+- [Git Flow](#git-flow-)
+- [GCS - Anotações de Aula](#gcs---anotações-de-aula-️)
 
 # Git Flow 🔴🠒🟢
 Foi criado em 2010 pelo holandês Vincent Driessen. Trata-se de uma estratégia de workflow utilizada para organizar o versionamento de código no repositório, mantendo a segurança. Para compreendê-lo mais  facilmente, é possível visualizá-lo como uma árvore e seu ramos, isto é, um grafo.
@@ -164,5 +170,123 @@ git pull
 
 > Mas o processo é basicamente rodar `git pull origin [branch de origem da PR]` na branch que você tá tentando realizar a PR com conflito.
 > Nesse caso eu estava na `feat/centobank-transacao`, então foi `git pull origin dev`. Por que a dev é a "branch de origem" da minha branch. 1. Daí quando você faz isso o git exibe no terminal o processo de tentar realizar o merge automático das alterações. Mas em alguns casos ele não vai conseguir, e vai reclamar com "CONFLICT". Então você vai passando por cada um desses arquivos, onde você vai encontrar trechos de código marcados com [1] a versão que você estava trabalhando (current) e [2] a versão que está vindo da atualização que você está tentando fazer (incoming). O seu papel é decidir qual das duas vai manter. No VSCode tem uma extensão muito boa pra dar uma força nessas coisas, que é o [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) mas é legal que você saiba fazer manualmente também. Finalizado tudo, é só dar o `git add` de sempre e um `git commit` sem `-m` mesmo, que o próprio git já vai preencher a mensagem com a mensagem padrão de merge ("Merge branch 'dev' github.com:cento-software/bufunfa into ..."). Daí quando você faz isso o git exibe no terminal o processo de tentar realizar o merge automático das alterações. Mas em alguns casos ele não vai conseguir, e vai reclamar com "CONFLICT". A chave é acompanhar cada um dos CONFLICTs direitinho pra não deixar nada passar. O ideal é sempre testar depois de um merge desse pra garantir que você não deixou nenhum conflito pra resolver. Quando você já sabe o que precisa manter e o que não, fica bem mais fácil. Nesse caso aí, eu sabia que a maioria das novidades era por causa do merge da parte de authn na dev. Então foi só aceitar as alterações nos repositories e nas páginas/endpoints de autenticação e reorganizar os scripts do banco.
+
+# GCS - Anotações de Aula 🏭️👩‍💼
+
+* Em Gerência e Configuração de Software, nós não gerenciamos apenas o código, mas também o protótipo, os requisitos, etc.  
+* Pra além do código do modelo, temos que versionar também o registro do modelo, e o código do modelo.   
+* **Configurar**: atribuir formas diferentes a uma representação que entrega valor para um caso específico. Atribuir forma a algo para dar representatividade a alguém.  
+* **Release**: uma representação que tem valor para algo ou para alguém.  
+* **Gerência**: planejamento, organização, controle e aplicação de princípios com o intuito de maximizar a utilização dos recursos.  
+* **Processos** em métodos ágeis são **abordagens.**  
+* **Engenharia de Software:** é a aplicação de uma abordagem sistemática, disciplinada e quantificável, para o desenvolvimento, operação e manutenção do software.  
+* Segundo a norma, **Gerência de Configuração é** um conjunto de atividades de apoio que lida com as mudanças inerentes ao desenvolvimento de software, mantendo a integridade e a estabilidade durante a evolução do projeto. “Processos que suportam a identificação única, o armazenamento controlado, versões controladas e relato de produtos de trabalho, componentes, durante a vida de um sistema de software”. Gerência de Configuração é um processo de gerência da tecnologia da informação que rastreia itens individuais de configuração de um sistema de informação.  
+* **Build != Release.** Ninguém manda build pra produção, o que se manda é release.  
+* **Versão:** forma ou variação de algo. É diferente de apresentação ou edição de um texto, filme, software etc. Refere-se a uma identificação específica.  
+* **Hand-off:** nós temos uma equipe que precisa desenvolver logo… É fazer uma parte da equipe caminhar mais rápido para que a outra parte possa fazer a parte dela, por é dependente. Vc tem que caminhar a frente porque alguém precisa da sua entrega, e se vc não fizer isso, a outra parte da equipe fica bloqueada. Sendo assim, uma parte da equipe ficará altamente sobrecarregada por um tempo.  
+* **Principais tarefas:** definir e implementar processo; identificar configuração; controlar configuração; relatos da situação da configuração; avaliação de subcontratos e fornecedores; controlar terceiros, fornecedores.  
+* **Itens de Configuração (IC):** são itens (contendo informação) selecionados para controle das versões. É como se fosse um quebra-cabeça, precisa ser controlada a mudança, esse é um item de configuração. É um artefato de software que precisa ser gerido a fim de entregar um produto ou serviço de software.  
+* **Barrier Artefact:** é um artefato que permite a transmissão de informação entre equipes diferentes.  
+* **Item de Configuração:** é um artefato de software que precisa ser gerido a fim de entregar um produto ou serviço de software. Se eu sei que um artefato vai sofrer muitas mudanças que precisam ser controladas, então esse artefato é um item de configuração.  
+* **Artefato:** é um elemento artificial que concretiza a visão que temos do minimundo (o nosso domínio). Ex.: issues, modelo, protótipos, modelo arquitetural, um README, especificações, templates etc.  
+* Em GSC, queremos que nossos desenvolvedores estejam trabalhando no mesmo momento, ou que possam escolher em que momento vão trabalhar.  
+* **Device Farming:** é um tipo de teste para sistemas mobile.  
+* **SRE \- Site Reliability Engineering:** serve para sistemas de altíssimo alcance e alta confiabilidade.  
+* **Release Engineering:** você deve conseguir gerar uma release em menos de duas horas.  
+* **Spike:** é uma história de usuário de estudo (coisas que a equipe precisa estudar).  
+* **Rollback:** é quando você volta uma versão.  
+* **Commit:** é submeter contribuição, não alteração simplesmente.  
+* Uma versão do tipo **Revisão** substitui a versão anterior. Já uma **Variante** não substitui, ela pode coexistir. O windows 11 é uma revisão, diante das versões anteriores.  
+* **Repositório**: local onde os itens de configuração são armazenados.  
+* **Baseline:** forma (configuração) que precisa ser revisada e aprovada para que eu possa iniciar uma etapa no projeto. Configuração revisada e aprovada que serve como base para uma próxima etapa de engenharia e que somente pode ser modificada via processo formal de GCS. São estabelecidas ao final de cada fase de desenvolvimento: análise (funcional), projeto (allocated) e implementação (product).  
+*  Um elemento mais básico da baseline de um protótipo pode ser o **Design System**.   
+* **Building:** é um processo de compilação e transpilação de geração de pacotes, configurações alvo. P. ex., é uma confirmação da configuração, para que ela seja uma versão executável: pom.xml. Confirma que o processo de configuração funciona. Utiliza arquivo de comandos que descreve como deve ocorrer a construção.  
+* **Release:** versão disponibilizada para um propósito específico. *Ela tem representação para alguém, que não necessariamente o usuário, mas talvez algum stakeholder.* Toda liberação é uma versão, mas nem toda versão é uma liberação. *Nem toda versão é um release.*  
+* **Engenharia de Plataforma:** aplicação de princípios do DevOps para melhorar segurança, compliance, custos e tempo de entrega, por meio de autoatendimento e melhor experiência para desenvolvedores.  
+* As avaliações de apps, como as da app store, são **solicitações**.
+
+## Atividades da GCS:
+  * Planejar o gerenciamento de configuração;  
+  * Executar a identificação da configuração;  
+  * Gerenciar alterações de configuração;  
+  * Executar controle de liberação;  
+  * Executar a contabilidade do status da configuração;  
+  * Realizar avaliação de configuração (auditorias)
+
+## CONTROLE DE VERSÃO E CONTROLE DE MUDANÇA
+
+* **Controle de Versão:** é importante porque apoia o desenvolvimento de diversas maneiras; permite colaboração concorrente; Registro de histórico; variação no projeto; apoia atividades de controle de mudança e integração/entrega/implantação contínua.  
+* **Mudança** é uma modificação planejada, que estudamos, analisamos e trazemos para nosso projeto.  
+* Perguntas importantes: Por que o sistema mudou **(controle de mudanças)**? Quais foram as mudanças **(controle de versão)**? O sistema continua funcionando depois das mudanças **(integração contínua)**?  
+* **Gerenciamento de mudanças** é um processo utilizado para identificar, avaliar, aprovar, implementar e acompanhar modificações em itens de configuração ao longo do ciclo de vida do software. Identificação, registro, avaliação, aprovação, implementação e acompanhamento de todas as alterações realizadas nos artefatos de software ao longo do ciclo de vida do projeto e nos processos.  
+* Se foi pra produção, está na fase de manutenção e evolução, se não, está na fase de desenvolvimento. Nós devemos controlar as mudanças ATÉ NA FASE DE MANUTENÇÃO E EVOLUÇÃO.  
+* CICLO DE VIDA DO DESENVOLVIMENTO DE SOFTWARE (SDLC): planejamento \> análise de requisitos \> projeto \> implementação \> teste \> implantação \> manutenção e evolução.  
+* A Descoberta de Produto, Lean Inceptions são abordagens da engenharia de requisitos que têm muita **divergência e convergência.** Eles buscam pontos de divergência.  
+* Um elemento que ajuda no **paradoxo da escolha** é ter uma estratégia básica que é ter rotular as issues, isto é, colocar labels nas issues.  
+* **Auditoria de Gerência de Configuração:** garantir a conformidade com os padrões e práticas estabelecidos; Identificar áreas de melhoria nos processos de gerência de configuração; assegurar a integridade e rastreabilidade das configurações de software; aspectos avaliados (conformidade com os processos estabelecidos, integridade e rastreabilidade das configurações; adequação da documentação de configuração; eficácia dos controles de versão e mudança).  
+* **issue:** acompanhar o trabalho, dar ou receber feedback, colaborar com ideias ou tarefas e se comunicar eficientemente com outras pessoas. Usadas para relatar bugs e sugerir novas funcionalidades. Muitas equipes organizam o desenvolvimento associando issues e pull requests. Tornaram-se elemento central on controle do ciclo de vida do software. **Estrutura básica:** contexto, problema, solução ou próximo passo. Descrição clara, mudança é auto-contida, limites de habilidades necessárias para resolução, carga de trabalho baixa.
+
+## SEVERIDADE E PRIORIDADE
+
+* **Prioridade** é sempre *agendamento*, algo merece atenção prévia. Significa algo que merece atenção prévia.  
+* **Severidade** é sobre *padrõe*s, se um padrão é rigoroso, ele não pode ser abandonado. Severidades: crítico, major, minor, enhancement. É o estado ou qualidade de ser severo; severo implica adesão a padrões rigorosos ou princípios elevados e frequentemente sugere aspereza.  
+* Prioridades: alta, média e baixa.  
+* **issue tossing** é quando a gente tem que ficar trocando o responsável por resolver a issue, normalmente porque você não conhece bem as pessoas e as capacidades das pessoas na equipe.
+
+## CONTROLE DE VERSÃO
+
+* O **controle de versão** é composto de duas partes: repositório e área de trabalho.  
+* O **repositório** tem os itens de configuração \+ o histórico de versões dos itens. A área de trabalho não armazena o histórico. O repositório contém os arquivos versionados e os commits.  
+* A **área de trabalho** é onde você edita o código, por exemplo, na IDE.  
+* **Commit** é o registro permanente de um conjunto de alterações feitas em arquivos, criando uma nova revisão no repositório. A esfera do desenho representa um conjunto de commit. Representa o encerramento de uma unidade lógica de trabalho, permitindo rastreabilidade, reversão e colaboração no desenvolvimento de software. É algo que ocorre apenas no repositório local, e não no remoto.  
+* **Update:** é o processo de atualizar a cópia de trabalho local com as alterações mais recentes que foram committadas no repositório central por outros devs.  
+* **hook:** é algo que está no .git.  
+* Há tipos de repositórios:  
+  * Controle centralizado: há um único repositório central armazenado em um servidor, e os desenvolvedores acessam esse servidor para obter a versão mais recente dos arquivos. É muito rigoroso, cheio de regras, depende de conexão de rede, tem um único repositório, o histórico das alterações ficam só no rep central, é uma fonte autoritária. Desvantagens: dependência do rep central, ponto único de falha. Vantagens: controle de acesso, cópia de segurança, controle de qualidade.  
+  * Controle distribuído: cada dev tem a área de trabalho e um **repositório local**, atua com arquitetura peer-to-peer. Permite que os devs trabalhem de forma independente e offline, realizando commits localmente e sincronizando com os reps dos outros. Vantagens: rapidez, autonomia, confiabilidade, redução de custos com servidor.  
+* **git fetch:** atualiza apenas o histórico de versão e não gera conflito nenhum.  
+* A identificação das coisas são chaves **hash**. Quando você faz commit é gerado um idenficador, que é colocado em algum lugar da tabela hash,   
+* Uma branch que tem commits demais pode ser um **átomo de confusão.** Não faça ramificações de longa duração. Isso pode gerar: perda de contexto, diminuição de colaboração, risco de regressões, dificuldade de teste, conflitos complexos.
+
+
+## MODELO DE RAMIFICAÇÕES
+
+* **Ramificação:** é um ponteiro para um conjunto de alterações feitas. É um ponteiro móvel para um commit.  
+* O sistema de versionamento não leva em consideração a estrutura do código, apenas o texto.  
+* O snapshot é uma “fotografia” de um determinado estado do código.  
+* Vantagens: modificar os IC sem alterar a master; “desligar” facilmente funcionalidades etc; permite várias pessoas trabalhando ao mesmo tempo; evita conflitos;  
+* Quando a gente a lida com mesclagem é importante saber lidar com a dívida técnica  
+* HEAD significa que qualquer coisa que for commitada a partir de agora será feito a partir desse head.  
+* O \* do \`git branch\` indica onde está o head.  
+* O \`git switch\` permite troca entre branches e criação de branches. Ele faz uma espécie de stash.  
+* O pull request é uma solicitação de contribuição.   
+* É uma boa prática sempre realmente aprovar uma PR, realizando comentários.  
+* **O que é feature?** não é apenas a funcionalidade, pode ser algo que precisamos trabalhar numa ramificação para que outro colega possa terminar a parte dele. Existe um artigo discutindo o conceito de feature.  
+* **Feature Branch Workflow:** a partir do ramo principal são criadas branches para as features que precisam ser criadas. Esse modelo é pouco sofisticado e exige alta maturidade e entendimento da equipe. Quanto mais próximo o modelo estiver da branch principal, mais ele exige maturidade e  conhecimento da equipe.  
+* A gente pode estabelecer uma política de exigência ou não de PRs para determinadas branches.  
+* **Git flow:** Feature branch \> Develop \> Release Branch \> Hotfix \> Main  
+* No git hub flow é obrigatório haver uma estratégia de implantação contínua, é um critério do modelo.  
+* **Git lab flow:** tem as branches de ambiente. Ele é uma plataforma, o git lab.   
+* **Trunk-based:** exige altíssima maturidade da equipe, pois as branches das extremidades estão bem próximas do usuário. É preciso garantir que as entregas mantêm a estabilidade. Demanda critérios muito bem definidos.   
+* Crie o hábito de utilizar o **git status**. **Conteúdo imutável**: uma vez criado, o conteúdo de um **blob** não pode ser alterado. Cada blob é identificado pelo hash.   
+* O padrão de commits semânticos do Angular é o mais utilizado, mas dá pra usar o da microsoft também ou criar o seu próprio.  
+* Quando você está num projeto com muitas pessoas, não é recomendado utilizar o rebase.
+
+## CI/CD - Continuos Integration & Continuos Delivery
+
+* CD envolve tanto delivered e deploy.  
+* A **build** é quando a olha para os elementos de configuração. Está mais ligada à CI.   
+* CI: não lida com nenhum aspecto de release. Ajuda o time a ver logo o formato do produto. A release é algo que entrega valor para alguém.   
+* A medida que você faz uma contribuição é interessante que haja mecanismos de análise da sua contribuição.  
+* Não existe entrega contínua sem implantação contínua.  
+* Se você fizer um commit e ele passar no CI, ele será implantado automaticamente.  
+* Você só vai implantar aquilo que estiver na branch principal.  
+* Integração contínua é uma cultura. Se nem todo mundo da equipe tiver essa cultura, não adianta fazer esteira. Ela prega que cada desenvolvedor deve integrar código em um repositório compartilhado várias vezes ao dia.  
+* Se você não souber pensar de forma atômica, você não é um engenheiro eficiente. A gente tem que ter visão do todo: do time, do negócio.  
+* O quanto o teu time entrega valor rapidamente.  
+* É um antipadrão haver um evento, uma cerimônia para integrar código.  
+* Você só pode ter CD se você rodar a esteira de CI.  
+* 
+
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=008000&height=120&section=footer"/>
