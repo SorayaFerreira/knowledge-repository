@@ -52,7 +52,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 
 # React
 - [React learn](https://react.dev/learn) é muito legal.
-- O React fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
+- O React é uma `lib` que fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks de UI. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
 - Para dar estilo, podemos utilizar bibliotecas como Bootstrap, Tailwind, entre outras;
 - Alguns termos ainda me geram dúvida sobre sua função e relação entre as ferramentas supracitadas: Radix UI, shadcn/ui, Tailwind, Origin UI;
 - O [Origin UI](https://originui.com/) e o [Kibo UI](https://originui.com/) são _projetos_ que utilizam componentes primitivos do **shadcn/ui** em seus próprios componentes.
@@ -64,7 +64,9 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Quando você for importar um componente, é interessante investigar de quais outras libs ele depende e se elas são confiáveis.
 
 - **Componente**: é um pedaço da UI que tem sua própria lógica e aparência. Ele pode ser tão grande quanto uma página da web, ou tão pequeno quanto um botão.
-- ano, achei loko isso. Um componente react é uma função javascript que retorna um _markup_ um HTML. Daí você pega e chama essa função dentro de tags (`< />`) como se fosse um elemento HTML mesmo.
+- Os componentes são como tags HTML, e, assim como tags HTML possuem propriedades (`<img src="./alguma_coisaqueatagrecebeu">`), os componentes possuem propriedades. Dentro dos componentes há funções javascript que recebem como parâmetro as `props`, isto é, as propriedades passadas lá entre </> (colchetes).
+- Lá dentro da função javascript, você pode acessar as `props` ou pode acessar o `children` dessas `props`, que pode ser um texto entre as tags, tipo `<div>Eu sou o children.</div>`.
+- Mano, achei loko isso. Um componente react é uma função javascript que retorna um _markup_ um HTML. Daí você pega e chama essa função dentro de tags (`< />`) como se fosse um elemento HTML mesmo.
 - O nome dos componentes têm que começar com letra maiúscula.
 - [Detalhes do JSX](https://react.dev/learn#writing-markup-with-jsx).
 - O atributo `class` do react é o `className`, mas funciona do mesmo jeito.

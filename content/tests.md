@@ -265,7 +265,7 @@ A diferença entre Verificação e Validação é a ordem das duas últimas pala
 
 - O `results.ts` é uma abordagem diferente para tratamentos de erros e exceções. 
 - Nesse caso, estamos utilizando TypeScript, mas tal abordagem pode surgir em várias linguagens diferentes, como o Golang, por exemplo. 
-- A ideia do results.ts gera algo muito elegante, que é melhor detalhado no arquivo [js_ts.ipnynb](./js_ts.ipynb).
+- A ideia do results.ts gera algo muito elegante, que é melhor detalhado no arquivo [js_ts.ipnynb](typescript.ipynb).
 
 ```javascript
 try {

@@ -29,6 +29,8 @@ tags:
 - [fetch API](#fetch-api)
 - [Runtimes](#runtimes-️)
 - [Gerenciadores de Pacotes](#gerenciadores-de-pacotes)
+- [Arquitetura Nuvem Multitenant 🆚 Single-Tenant](#arquitetura-nuvem-multitenant--single-tenant)
+- [Serviços Web](#serviços-web)
 
 # Sistemas de Autenticação
 Autorização, às vezes identificada como `authz`, tem alta relação com a [Autorização](#sistemas-de-autorização), podendo ser confundida com ela. Entretanto, elas têm conceitos diferentes. Sumariamente, authz é responsável por _permissões_, enquanto que authn é responsável por _identidades_.
@@ -215,7 +217,7 @@ Uma desvantagem que ele apresenta é não suportar todos os pacotes possíveis.
 # Serviços Web
 - Geralmente são utilizados por outras aplicações web como fontes de dados.
 - Aplicação web != Serviço web.
-- 
+- Monolito X Microsserviços X Híbrido
 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=footer"/>
