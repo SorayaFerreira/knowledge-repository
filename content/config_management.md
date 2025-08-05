@@ -115,6 +115,20 @@ GIST: são repositórios Git. São muito parecidos com o Github, porém ele perm
 
 ## Principais Comandos
 A seguir, anotações sobre certos comandos iniciais para utilizar no terminal do Git Bash.
+
+```mermaid
+flowchart TB
+    A(Diretório de Trabalho)-->|add|B("Index (ou Stage)")
+    B-->|commit|C(Repositório local)
+    C-->|merge|A
+    C-->|push|D(Respositório remoto)
+    style A stroke:#fff,fill:#d71b09
+    style B stroke:#fff,fill:#d71b09
+    style C stroke:#fff,fill:#d71b09
+    style D stroke:#fff,fill:#d71b09
+```
+----
+
 - `git commit -am ""` para fazer add e commit em apenas uma linha de comando. O “add” coloca a alteração dentro do contêiner antes de adicionar à master. 
 - `git log` mostra todos os commits realizados, detalhadamente.
 - `git log --oneline` mostra todos os commits com apenas os nós e a mensagem.

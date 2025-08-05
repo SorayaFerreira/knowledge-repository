@@ -62,6 +62,8 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Atualmente, a forma mais recomendada de se construir interfaces com React é utilizando o Radix UI e o shadcn/ui.
 - Libs que o shadcn recomenda como alternativas: [ariakit](https://ariakit.org/), [React Aria](https://react-spectrum.adobe.com/react-aria/index.html).
 - Quando você for importar um componente, é interessante investigar de quais outras libs ele depende e se elas são confiáveis.
+- **Renderizar** significa que o react vai recalcular todo o conteúdo de um componente. Isso acontece quando: um hook muda; uma propriedade do componente muda; um elemento pai do componente é al terado; é preenchido um novo estado.
+- **Cuidado🚨**: há um tipo de erro muito comum no react é a criação de _estados derivados_, gerando renderização desnecessária. Não cometa isso. Para resolver, tente criar uma variável para armazenar, ao invés de usar um state.
 
 - **Componente**: é um pedaço da UI que tem sua própria lógica e aparência. Ele pode ser tão grande quanto uma página da web, ou tão pequeno quanto um botão.
 - Os componentes são como tags HTML, e, assim como tags HTML possuem propriedades (`<img src="./alguma_coisaqueatagrecebeu">`), os componentes possuem propriedades. Dentro dos componentes há funções javascript que recebem como parâmetro as `props`, isto é, as propriedades passadas lá entre </> (colchetes).
