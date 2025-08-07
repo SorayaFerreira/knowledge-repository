@@ -50,7 +50,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 
 - Pages: instâncias de modelos que mostram a aparência de uma interface de usuário com conteúdo representativo real.
 
-# React
+# React ⚛✨
 - [React learn](https://react.dev/learn) é muito legal.
 - O React é uma `lib` que fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks de UI. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
 - Para dar estilo, podemos utilizar bibliotecas como Bootstrap, Tailwind, entre outras;

@@ -13,6 +13,7 @@ tags:
 # Sumário
 - [Shape Up](#shape-up)
 - [Getting Real](#getting-real-️)
+- 
 
 # Shape Up
 ## Shaping
@@ -274,5 +275,20 @@ The smarter, faster, easier way to build a successful web application.
 ## Conclusion
 - Sucesso é sobre uma excelente execução.
 - Você não pode apenas ter uma boa escrita e ainda assim falhar em cumprir as promessas em sua narrativa.
+
+# Software Engineering at Google
+> Lessons Learned from Programming Over Time
+
+> Programador X Engenheiro: 
+- Programar é o ato imediato de produzir código. 
+- Engenharia de Software é o conjunto de políticas, práticas e ferramentas necessárias para fazer código útil ao longo do tempo em que ele for utilizado, permitindo colaboração entre o time.
+
+> Júniores
+- Um grande erro que cometemos é não pedir ajuda dos colegas quando estamos travados. Não devemos ter medo de nossas perguntas serem "simples" demais, ou idiotas. 
+- Não é legal pensar "eu só preciso continuar tentando". 
+- Seus coworkers são, geralmente, as melhores fontes de ajuda
+- Não existe um momento mágico no qual você instantaneamente começa a saber o quê fazer em todas as situações. Até mesmo engenheiros experientes da google ainda têm dúvidas às vezes.
+- Quanto mais você sabe, mais você sabe que você não sabe.
+- Até os autores desse livro têm síndrome do impostor.
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=c8a2c8&height=120&section=footer"/>
