@@ -21,7 +21,7 @@ Nesse sentido, a arquitetura em questão consiste em tratar componentes de uma p
 
 ![](https://res.cloudinary.com/ddxwdqwkr/image/upload/f_auto/v1633284886/patterns.dev/theislandsarch--avuxy9rrkk8.png)
 
-## Outras Aspectos do Astro
+## Principais Aspectos do Astro
 - Em `public` ficam os assets que serão utilizados no projeto.
 - Existe um objeto global, que a plataforma oferece, chamado `Astro`, que dá acesso a atributos e métodos interessantes para a interação com requisições e a aplicação em si.
 - É possível misturar componentes de diferentes frameworks de UI, como React, Vue e [Svelte](https://svelte.dev/docs/svelte/overview), por exemplo.
@@ -54,5 +54,7 @@ for (const [key, value] of searchParams.entries()) {
 }
 ```
 -  O método estático `Object.fromEntries()` transforma uma lista de pares key-value num objeto.
+- Por baixo dos panos, o Astro faz uso do [Vite](https://vite.dev/). Ele é a melhor ferramenta para fazer um SPA.
+- Lá no arquivo de configuração, o `astro.config.mjs`, tem um atributo no `defineConfig` chamado `output`. O valor padrão dele é `static`, porém geralmente, nas aplicações da cento.software, a gente muda para `server`, porque são aplicações dinâmicas, não estáticas. O Astro é uma base para aplicações estáticas, então fazemos essa alteração no `output` e sempre que precisarmos construir uma página estática, nós adicionamos uma exoprtação ao arquivo para tanto: `export const prerender = true`. É importante diferenciar aquilo que é estático daquilo que é dinâmico.
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=800080&height=120&section=footer"/>

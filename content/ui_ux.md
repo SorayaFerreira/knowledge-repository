@@ -78,5 +78,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Não é necessário colocar `()` ao final para chamar uma função, o próprio React chama o handler de evento quando o usuário o executar.
 - Tem como armazenar o número de vezes que um evento ocorreu, tipo o clique de um botão, por meio do `{ useState }`, tu importa e daí tem que adicionar a variável no seu componente. Mesmo que você tenha mais de uma instância do mesmo componente, a contagem de cada um será diferente.
 - **Hooks**: o que é um hook? Então. Hooks são funções que o nome delas começa com `use`, tipo a `useState` mesmo. Você pode criar seus próprios hooks combinando os hooks embutidos existentes. Os hooks são restritivos. Eles só podem ser chamados no topo dos seus componentes ou de outros hooks. 
+- `useEffect(setup, dependencies?)` é um hook meio polêmico. Alguns defendem, outros amaldiçoam. 
+- 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>

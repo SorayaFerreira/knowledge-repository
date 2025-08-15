@@ -63,4 +63,9 @@ Recomendações (Seção 4.4.3.):
     - Casos de Uso:
         - Usar para perguntas abertas/gerais, que não exigem uma resposta única e específica;opose changes and an editor model 
 
+# Redes Neurais – Overview
+> Livro: An Introduction to Neural Networks, by Kevin Gurney
+
+- Uma **rede neural** é um conjunto interconectado de simples elementos de processamento, unidades ou nós, cujas funcionalidades vagamente se baseiam no fucionamento do neurônio biológico. A habilidade de processamento da rede está armazenada nas forças de conexão interunidade, ou pesos, obtidos num processo de adaptação, ou aprendizado, a um conjunto de padrões de treinamento.
+
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=800080&height=120&section=footer"/> 

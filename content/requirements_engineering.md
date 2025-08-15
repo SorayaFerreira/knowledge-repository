@@ -4,6 +4,8 @@ description: Conteúdo sobre Engenharia de Requisitos
 pubDate: Jul 24 2025
 tags:
   - MVP
+  - Design
+  - Documentação Técnica
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=f2c438&height=120&section=header"/>
 
@@ -36,6 +38,17 @@ tags:
 - O MVP teste se vale a pena construir e vender algo.
 
 > **_O MVP não é um produto. Ele é um processo.
+
+# Documentação Técnica
+> Link de referência: https://grantslatton.com/how-to-design-document
+
+- O objetivo maior de uma documentação de design é informar ao leitor que aquele design é o melhor dadas as circunstâncias que o cercam.
+- Você não deve escrever uma documentação esperando que o leitor complete e conecte todas as coisas na cabeça dele sozinho.
+- É interessante que o leitor pense que cada sentença soa óbvia a partir das anteriores, de modo que seja uma leitura muito fácil, simples de compreender e autocompleta.
+- A documentação deve apresentar os modelos mentais que levaram a uma solução de maneira inteligível, mesmo que tenha levado semanas para ser pensado.
+- **Você precisa prever todas as alternativas e todos os argumentos que o leitor possa pensar para contrapor suas ideias. Então, garanta que tudo isso seja previamente invalidado.**
+- Seja muito sucinto porque a atenção do seu leitor é algo escasso. Utilize notas de rodapé para ajudar.
+- 
 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=f2c438&height=120&section=footer"/>
