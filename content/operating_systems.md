@@ -214,7 +214,7 @@ Correções rápidas:
 -  Se o sistema linux trava, aperte Ctrl+Alt+Esc, para ativar o xkill e encerrar o aplicativo defeituoso.
 
 # Arch Linux 📘💠
-A seguir, conhecimentos básicos necessários para a primeira aventura com Arch Linux!!!!!
+> A seguir, conhecimentos básicos necessários para a primeira aventura com Arch Linux!!!!!
 
 - O que é o **kernel** e como ele interage com o sistema.
 - O papel do **init system** (Arch usa `systemd`).

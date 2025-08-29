@@ -64,7 +64,6 @@ Mecanismo de Banco de Dados autocontido, integrado, completo, de domínio públi
 - Se for necessário fazer uma migração do PGLite para o Postgres, não daria conflito.
 
 ## MongoDB 🍃
-
 O Mongo é um SGBD de código aberto orientado a documentos, armazenando objetos altamente tipados, logo, serve para bancos de dados não relacionais. Foi inicialmente desenvolvido pela empresa `10gen` em 2007, mas somente a partir de 2009 focou em mantê-lo. Ele é recomendado quando usuários que precisam consultar dados de tipos variádos, os dados são não estruturados, há mais flexibilidade, precisa-se de melhor desempenho e disponibilidade como prioridade. 
 
 

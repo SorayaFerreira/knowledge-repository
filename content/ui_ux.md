@@ -9,12 +9,14 @@ tags:
   - Interfaces
   - Design
   - Atômico
+  - React
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=header"/>
 
 # Sumário
 - [Heurísticas de Nielsen](#heurísticas-de-nielsen---comprasbrasil)
 - [Atomic Design](#atomic-design)
+- [React](#react-)
 
 # Heurísticas de Nielsen - ComprasBrasil
 - Visibility of System Status: indicar ao usuário onde ele está, de onde veio e para onde vai. Ex.: nossa área de controle do andamento.
@@ -78,7 +80,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Não é necessário colocar `()` ao final para chamar uma função, o próprio React chama o handler de evento quando o usuário o executar.
 - Tem como armazenar o número de vezes que um evento ocorreu, tipo o clique de um botão, por meio do `{ useState }`, tu importa e daí tem que adicionar a variável no seu componente. Mesmo que você tenha mais de uma instância do mesmo componente, a contagem de cada um será diferente.
 - **Hooks**: o que é um hook? Então. Hooks são funções que o nome delas começa com `use`, tipo a `useState` mesmo. Você pode criar seus próprios hooks combinando os hooks embutidos existentes. Os hooks são restritivos. Eles só podem ser chamados no topo dos seus componentes ou de outros hooks. 
-- `useEffect(setup, dependencies?)` é um hook meio polêmico. Alguns defendem, outros amaldiçoam. 
-- 
+- `useEffect(setup, dependencies?)` é um hook meio polêmico. Alguns defendem, outros amaldiçoam. Ele é muito poderoso.
+- `onChange` Events: um evento é uma maneira de lidar com ações no client-side, como cliques, movimentos do mouse, alterações com inputs etc. Eles são um pouco diferentes das ações do DOM, porque o React faz um encapsulamento dos eventos em objetos `SyntheticEvents`. Um tipo de evento é o `onChange`, que se refere a _mudanças em valores de entrada_. O seu componente vai receber uma prop `onChange={}`, daí dentro das chaves tu vai colocar a chamanda da função que lida com isso, tipo um `onModalityChance`. Geralmente a gente cria uma constante que vai receber essa função. 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>

@@ -7,6 +7,9 @@ tags:
   - Abstração
   - Hipótese
   - Método de Estudo
+  - Erros
+  - Júnior
+  - RegEx
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=f2c438&height=120&section=header"/>
 
@@ -15,6 +18,7 @@ tags:
 - [Abstração](#abstração)
 - [Método de Estudo do Fernandin](#método-de-estudo-do-fernandin-️️)
 - [Expressões Regulare - RegEx](#expressões-regulare---regex)
+- [Problemas de um Dev Júnior - ou Estagiário](#problemas-de-um-dev-júnior---ou-estagiário)
 
 
 # Modelo Mental 🧠🧮
@@ -50,13 +54,13 @@ Então vamos ao meu modelo mental para o problema que está acontecendo:
 - Existe uma `representação de um sistema de arquivos` da cópia local do meu repositório — onde o Git, de alguma forma mágica (e que não convém pra gente no momento), armazena o histórico de alterações da parte do meu `sistema de arquivos` que está sendo controlada pelo git.
 - Não está havendo uma `sincronização` entre ambos. Estou removendo um arquivo/pasta no meu `sistema de arquivos`, mas essa alteração não está refletindo na `representação de um sistema de arquivos` do Git.
 
-### Hipótese
+## Hipótese
 > Agora, vou criar uma descrição do que eu acredito que está acontecendo, com base nos conceitos que eu modelei na minha abstração. Se algo ficar faltando, é sinal de que falta modelar mais algum conceito, ou propor uma nova modelagem que faça mais sentido.
 
 - Quando removo um arquivo no GitHub, de alguma forma ele sincroniza as alterações realizadas no `sistema de arquivos` e na `representação do sistema de arquivos` do git
 - Preciso encontrar uma forma de `sincronizar` meu `sistema de arquivos` e a `representação do sistema de arquivos` do git
 
-### Solução 
+## Solução 
 - `rm arquivo.txt` remove um arquivo apenas no meu `sistema de arquivos`
 - `git rm --cached arquivo.txt` remove um arquivo apenas na `representação do sistema de arquivos` do git
 - `git rm arquivo.txt` remove um arquivo tanto no meu `sistema de arquivos` quanto na `representação do sistema de arquivos` do git
@@ -94,17 +98,23 @@ E uma que eu usava mais no vestibular era pegar um folha de papel e tentar escre
 
 Por fim, uma coisa que eu lembrei agora: complementação de conteúdo. Depois de eu ter terminado de ler os slides e estudar, eu gosto muito de ver uns conteúdos extras (livros, principalmente) pra eu me acostumar ainda mais com o conteúdo. Fiz isso em APSOO e Requisitos lendo o Engenharia de Software Moderna. Não precisa ESTUDAR a fundo, só ler normal mesmo. Vc vai vendo as informações e vai conectando com os slides e tudo fica muito mais natural. Essa é uma "técnica" que é boa se vc tiver tempo de sobra."
 
-# Engenharia de Software Baseada em Valor
-- o controle de feedback é essencial para a organização estimar, avaliar e adaptar-se às mudanças do mercado competitivo.
-- Os sistemas de valor agregado são uma forma de controlar feedbacks.
+# Problemas de um Dev Júnior - ou Estagiário
+- Não fazer perguntas a cada uma hora no dia, tendo medo de incomodar e querendo resolver tudo sozinho.
+    - Ao tentar resolver um problema, você deve colar mensagem de erro em genAIs, colar no Google, buscar em fóruns públicos por respostas, consultar a documentação com bastante velocidade. Se nada disso funcionar, não tenha medo de fazer uma pergunta no chat do seu colega de trabalho.
+- A IA não deve resolver todos os seus problemas, nem fazer todas as suas tasks. 
+- Desenvolvimento de Software não é apenas escrever código. Você não é datilógrafo de código.
+- Velocidade não é só escrever código o mais rápido possível. 300 linhas de código escritas em um dia pode consistir em débito técnico que vai te cobrar um preço alto mais tarde. 
+- Você não deve ignorar boas práticas.
+- O que você prefere: ser capaz de criar um CRUD EM 4 frameworks diferentes ou saber plenamente o que significa RESTFUL e conseguir criar algo para 100 usuários simultâneos?
+- Não deixe a síndrome de impostor te impedir de fazer nada. Não tenha medo de assumir responsabilidades maiores, nem muito menos de aplicar para vagas de senioridade maior.
 
-# Expressões Regulare - RegEx
+# Expressões Regulares - RegEx
 Acesse https://regex101.com/ para aprender mais sobre.
 Aperte Ctrl + F e faça testes.
 - `[0]` busca o caractere 0
 - `[02]` busca os caracteres 0 OU 2.
 - `[0-9]` busca qualquer número entre 0 e 9.
-- `[0][0]` Busca 0s juntos: `00`.
+- `[0][0]` Busca `0`s juntos: `00`.
 - `[0]{2}` O que está entre {} multiplica aquilo que está entre [].
 - `$` Fim da linha
 - `^` Início da linha
