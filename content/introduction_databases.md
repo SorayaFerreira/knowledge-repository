@@ -15,8 +15,16 @@ tags:
   - DER
   - Mermaid
   - SQL
+  - PGLite
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=8a0303&height=120&section=header"/>
+
+# Sumário
+- [[#Introdução a Bancos de Dados 🪑🎲]]
+- [[#Propriedades ACID 🧪]]
+- [[#Exemplos de SGBDs]]
+- [[#Structured Query Language (SQL)]]
+- [[#Diagrama Entidade Relacionamento]]
 
 # Introdução a Bancos de Dados 🪑🎲
 
@@ -36,22 +44,26 @@ Uma `transação` é um conceito fundamental, definido como uma unidade de execu
 - **Durabilidade**: é confirmar que, uma vez que a transação foi solicitada, mas não pode ser completada, todas as atualizações de outras transações não são perdidas.
 
 ---
-### Exemplos de SGBDs
+# Exemplos de SGBDs
 
 A seguir, são explorados alguns SGBDs selecionados, porém no site [dbdb.io](https://dbdb.io/) é possível obter maiores detalhes acerca de inúmeros SGBDs.
 Para escolher um deles, é preciso levar em consideração aspectos como os tipos de dados que serão armazenados, a quantidade de recursos financeiros disponíveis para tanto, os objetivos com o banco de dados e a capacidade do SGBD.
 
-#### PostgreSQL 🐘
+## PostgreSQL 🐘
 
 É um banco de dados Objeto-Relacional open-source, desenvolvido pela University of California de Berkeley, na linguagem C de programação. 
 Suporta *Materialized view*, *virtual view*, funções armazenadas, *triggers*, e foreign keys. Cobre operações a nível de transação, linguagem de definição de dados e de manipulação de dados, criação de funções e procedimentos. Todavia não oferece suporte a compilação de consultas. O postgreSQL é recomendado para aplicações empresariais com cenários rigorosos, tais como finanças, telecominicações e ERP (Planejamento de Recursos Empresariais). Seus benefícios incluem permitir escalabilidade, ter uma comunidade ativa, ser fácil de operar e de manter.
 
-#### SQLite 📜✒
+## SQLite 📜✒
 
 Mecanismo de Banco de Dados autocontido, integrado, completo, de domínio público e alta confiabilidade. O SQLite foi lançado nos anos 2000 por D. Richard Hipp quando ele estava trabalhando para a marinha dos Estados Unidos em um software de mísseis explosivos. Como o nome já sugere, este é um banco de dados mais simples que os demais, não sendo direcionado para dados empresariais, com alto volume e concorrência. Na realidade, ele pretende prover dados armazenados localmente para aplicações e dispositivos individuais, enfatizando economia, eficiência, autonomia e simplicidade.
 
-#### MongoDB 🍃
+## PGLite
+- O PGLite é algo como uma junção dos melhores benefícios do SQLite com os melhores benefícios do Postgres. 
+- Então, a instância pode rodar tanto na sua aplicação Node quanto no browser.
+- Se for necessário fazer uma migração do PGLite para o Postgres, não daria conflito.
 
+## MongoDB 🍃
 O Mongo é um SGBD de código aberto orientado a documentos, armazenando objetos altamente tipados, logo, serve para bancos de dados não relacionais. Foi inicialmente desenvolvido pela empresa `10gen` em 2007, mas somente a partir de 2009 focou em mantê-lo. Ele é recomendado quando usuários que precisam consultar dados de tipos variádos, os dados são não estruturados, há mais flexibilidade, precisa-se de melhor desempenho e disponibilidade como prioridade. 
 
 
@@ -61,12 +73,12 @@ O Firestone o sistema que funciona por trás do framework Firebase da Google. Tr
 
 Já o Supabase é uma alternativa ao Firebase, porém para bancos relacionais. Além de oferecer o serviço de SGBD, também permite autenticações, funções e armazenamento de mídias, tal como o firebase.
 
-#### Redis 🔴
+## Redis 🔴
 
 Redis é uma sigla para "REmote DIctionary Server", criado pelo engenheiro de software Salvatore Sanfilippo. Suporta o armazenamento de inúmeros tipos de estruturas de dados, o que é feito em sua memória. É recomendados para bancos estruturados que demandam armazenamento e processamento mais dinâmico e ágil
 
 ---
-### Diagrama Entidade Relacionamento
+# Diagrama Entidade Relacionamento
 
 O diagrama entidade-relacionamento pode ajudar a identificar as entidades – futuras tabelas – do banco de dados, junto de seus atributos e relacionamentos. A seguir, um pequeno exemplo, utilizando a notação pé-de-galinha.
 
@@ -141,7 +153,7 @@ O diagrama entidade-relacionamento pode ajudar a identificar as entidades – fu
     }
 ```
 ---
-### Structured Query Language (SQL)
+# Structured Query Language (SQL)
 A sigla significa "Linguagem de Consulta Estruturada". Ela é utilizada para armazenar, manipular, remover, pesquisar e analisar informações em um banco de dados relacional. 
 
 A seguir, exemplo de utilização dos principais comandos utilizados em um CRUD.

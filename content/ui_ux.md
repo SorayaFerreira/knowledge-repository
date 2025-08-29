@@ -9,12 +9,14 @@ tags:
   - Interfaces
   - Design
   - Atômico
+  - React
 ---
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=header"/>
 
 # Sumário
 - [Heurísticas de Nielsen](#heurísticas-de-nielsen---comprasbrasil)
 - [Atomic Design](#atomic-design)
+- [React](#react-)
 
 # Heurísticas de Nielsen - ComprasBrasil
 - Visibility of System Status: indicar ao usuário onde ele está, de onde veio e para onde vai. Ex.: nossa área de controle do andamento.
@@ -50,7 +52,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 
 - Pages: instâncias de modelos que mostram a aparência de uma interface de usuário com conteúdo representativo real.
 
-# React
+# React ⚛✨
 - [React learn](https://react.dev/learn) é muito legal.
 - O React é uma `lib` que fornece componentes sem estilo. Ele faz uso de uma técnica chamada VDOM (Virtual DOM) que faz com que ele seja mais efiente do que os demais frameworks de UI. Sempre que algo muda no DOM virtual, ele faz uma comparação com o novo estado, calcula a menor atualização possível e a aplica ao DOM real. Resumindo, o VDOM atualiza somente aquele pedacinho que foi alterado, e não o DOM inteiro. Só que o React tem alguns problemas, como o JSX mesmo. O JSX unifica o HTML com o JavaScript e isso fez algumas pessoas detestarem o React.
 - Para dar estilo, podemos utilizar bibliotecas como Bootstrap, Tailwind, entre outras;
@@ -62,6 +64,8 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Atualmente, a forma mais recomendada de se construir interfaces com React é utilizando o Radix UI e o shadcn/ui.
 - Libs que o shadcn recomenda como alternativas: [ariakit](https://ariakit.org/), [React Aria](https://react-spectrum.adobe.com/react-aria/index.html).
 - Quando você for importar um componente, é interessante investigar de quais outras libs ele depende e se elas são confiáveis.
+- **Renderizar** significa que o react vai recalcular todo o conteúdo de um componente. Isso acontece quando: um hook muda; uma propriedade do componente muda; um elemento pai do componente é al terado; é preenchido um novo estado.
+- **Cuidado🚨**: há um tipo de erro muito comum no react é a criação de _estados derivados_, gerando renderização desnecessária. Não cometa isso. Para resolver, tente criar uma variável para armazenar, ao invés de usar um state.
 
 - **Componente**: é um pedaço da UI que tem sua própria lógica e aparência. Ele pode ser tão grande quanto uma página da web, ou tão pequeno quanto um botão.
 - Os componentes são como tags HTML, e, assim como tags HTML possuem propriedades (`<img src="./alguma_coisaqueatagrecebeu">`), os componentes possuem propriedades. Dentro dos componentes há funções javascript que recebem como parâmetro as `props`, isto é, as propriedades passadas lá entre </> (colchetes).
@@ -76,5 +80,7 @@ Atomos são os blocos fundamentais de composição de toda matéria. Cada átomo
 - Não é necessário colocar `()` ao final para chamar uma função, o próprio React chama o handler de evento quando o usuário o executar.
 - Tem como armazenar o número de vezes que um evento ocorreu, tipo o clique de um botão, por meio do `{ useState }`, tu importa e daí tem que adicionar a variável no seu componente. Mesmo que você tenha mais de uma instância do mesmo componente, a contagem de cada um será diferente.
 - **Hooks**: o que é um hook? Então. Hooks são funções que o nome delas começa com `use`, tipo a `useState` mesmo. Você pode criar seus próprios hooks combinando os hooks embutidos existentes. Os hooks são restritivos. Eles só podem ser chamados no topo dos seus componentes ou de outros hooks. 
+- `useEffect(setup, dependencies?)` é um hook meio polêmico. Alguns defendem, outros amaldiçoam. Ele é muito poderoso.
+- `onChange` Events: um evento é uma maneira de lidar com ações no client-side, como cliques, movimentos do mouse, alterações com inputs etc. Eles são um pouco diferentes das ações do DOM, porque o React faz um encapsulamento dos eventos em objetos `SyntheticEvents`. Um tipo de evento é o `onChange`, que se refere a _mudanças em valores de entrada_. O seu componente vai receber uma prop `onChange={}`, daí dentro das chaves tu vai colocar a chamanda da função que lida com isso, tipo um `onModalityChance`. Geralmente a gente cria uma constante que vai receber essa função. 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=054f77&height=120&section=footer"/>
