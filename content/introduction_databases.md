@@ -189,4 +189,36 @@ WHERE idade > 25;
 
 ```
 
+# Referências Mútuas a Tabelas 
+Observe o snippet abaixo. Trata-se de uma definição de tabela com [Drizzle ORM](https://orm.drizzle.team/docs/overview), uma ORM para o ecossistema JS/TS. Agora, preste atenção à linha marcada pelo comentário de destaque. 
+
+```typescript
+export const onboardingOrganizationTable = pgTable(
+	"onboarding_organization",
+	{
+		onboarding_id: uuid()
+			.notNull()
+			.references(() => onboardingTable.id),
+		id: integer().notNull(),
+		type: organizationTypeEnum().notNull(),
+		cpf_cnpj: text().notNull(),
+	},
+
+    // Destaque:
+	(t) => [primaryKey({ columns: [t.onboarding_id, t.id] })],
+);
+```
+Essa função anônima enfiada aí é algo que me causou muitas dúvidas, mas ela é uma maneira de abordar um problema muito comum em definições de squemas:
+
+```sql
+create table A (id serial primary key, Bid serial references B);
+
+create table B (id serial primary key, Aid serial references A);
+```
+No caso acima, quando A está sendo criado, B ainda não existe. Isso é o mesmo tipo de erro que ocorre se eu fizer a referência diretamente a `onboardingOrganizationtable.onboarding_id` na criação de chave primária do código de exemplo. 
+
+> [!IMPORTANT]
+
+Provalvemente nem todas as runtimes/bundlers JS/TS vão dar esse erro. Algumas têm alguns mecanismos pra mitigar esse lance de usar referências antes da hora. No entanto,o Drizzle, por querer manter o suporte homogênio, não pode partir do pressuposto de que esse tipo de mecanismo vai ou não existir.
+
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=8a0303&height=120&section=footer"/>

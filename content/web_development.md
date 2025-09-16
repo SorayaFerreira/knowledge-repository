@@ -12,6 +12,8 @@ tags:
   - web enxuto
   - html
   - tenant
+  - Astro
+  - Island Architecture
 ---
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=header"/>
@@ -31,6 +33,7 @@ tags:
 - [Gerenciadores de Pacotes](#gerenciadores-de-pacotes)
 - [Arquitetura Nuvem Multitenant 🆚 Single-Tenant](#arquitetura-nuvem-multitenant--single-tenant)
 - [Serviços Web](#serviços-web)
+- [# Astro 💜🏝️](#astro-️)
 
 # Sistemas de Autenticação
 Autorização, às vezes identificada como `authz`, tem alta relação com a [Autorização](#sistemas-de-autorização), podendo ser confundida com ela. Entretanto, elas têm conceitos diferentes. Sumariamente, authz é responsável por _permissões_, enquanto que authn é responsável por _identidades_.
@@ -168,43 +171,34 @@ A maioria das linguagens de programação precisa de um ambiente runtime, entrat
 
 Para códigos em JavaScript, podemos citar como exeplos três runtimes. Eles executam código JS fora do navegador, utilizado principalmente quando aplicado no server-side:
 - 🟩 **Node.js**: foi lançado em 2009, é o mais utilizado e mais antigo runtime open-source para JavaScript. Dentre os três aqui citados, é o que tem menor performance, porém maior suporte, comunidade e opções de implantação. Ele é suportado por maior parte dos servidores em nuvem.  
-- 🐱‍🐉 [**Deno**](https://deno.com/): surgiu com o fito de resolver algumas questões identificadas no Node.js. Oferece suporte para carregamento de dependências via URLs e TypeScript integrado. Entre os três, possui maior segurança e vquantidade de ferramentas. No entanto, não disponibiliza armazenamento integrado. Nessa linha, é importante mencionar que ele é ótimo para o contexto do estágio porque sua configuração para uso é rápida e fácil, o que é ideal para um desenvolvedor iniciante.
 -  🧅 **Bun**: surgiu em 2021, sendo um runtime que foca na experiência do programador e na performance. O Bun se destaca por sua performance, armazenamento embutido com SQLite e interoperabilidade – permite comunicação entre diferentes sistemas. Sua aspecto negativo é que ainda não possuir opções de implantação.
+- 🐱‍🐉 [**Deno**](https://deno.com/): surgiu com o fito de resolver algumas questões identificadas no Node.js. Oferece suporte para carregamento de dependências via URLs e TypeScript integrado. Entre os três, possui maior segurança e vquantidade de ferramentas. No entanto, não disponibiliza armazenamento integrado. Nessa linha, é importante mencionar que ele é ótimo para o contexto do estágio porque sua configuração para uso é rápida e fácil, o que é ideal para um desenvolvedor iniciante.
+    - É simples conectar o projeto à OpenAI e interagir com a inteligência artificial. [Veja aqui](https://docs.deno.com/examples/openai-chat-completion/).
+    - Para fazer um servidor HTTP que mostra `Hello world`. Rode o comando `deno run --allow-net https://docs.deno.com/examples/http-server.ts` no terminal ou:
+    ```typescript
+        function handler(_req: Request): Response {
+            return new Response("Hello, World!");
+        }
 
-## Mais sobre o Deno ➕
-- Para criar timers para funções serem executadas em outro momento, com javascript. Neste exemplo, o console mostra a mensagem após 1000 milisegundos. `setTimeout(() => console.log("Hello, World!"), 1000);`. Também é possível criar intervalos para um função ser repetida a cada período de tempo: `setInterval(() => console.log("Hey!"), 1000);`.
+        Deno.serve(handler);
+    ```
 
-- Existe a possibilidade de mostrar cores! Neste exemplo, a mensagem aparece vermelha: `console.log("%cHello World", "color: red");`. Para mudar a cor do background no terminal: `console.log("%cHello World", "background-color: blue");`.
-
-- É simples conectar o projeto à OpenAI e interagir com a inteligência artificial. [Veja aqui](https://docs.deno.com/examples/openai-chat-completion/).
-
-- Para fazer um servidor HTTP que mostra `Hello world`. Rode o comando `deno run --allow-net https://docs.deno.com/examples/http-server.ts` no terminal ou:
- 
- ```typescript
-    function handler(_req: Request): Response {
-        return new Response("Hello, World!");
-    }
-
-    Deno.serve(handler);
- ```
-
-- Para fazer uma requisição para um servidor HTTP: teste no terminal `deno run --allow-net https://docs.deno.com/examples/http-requests.ts`. Ou leia mais [aqui](https://docs.deno.com/examples/http-requests).
+    - Para fazer uma requisição para um servidor HTTP: teste no terminal `deno run --allow-net https://docs.deno.com/examples/http-requests.ts`. Ou leia mais [aqui](https://docs.deno.com/examples/http-requests).
 
 # Gerenciadores de Pacotes
 São ferramentas que automatizam a gerência, instalação e compartilhamento de pacotes, que são as dependências de um projeto. Usar um gerenciador de pacotes garante que não haja arquivos conflitantes e ausênica de dependências.
+- NPM (Node Package Manager):
+    O NPM é o gerenciador de pacotes padrão da runtime [Node.js](#comparação-de-runtimes-para-js). Ele é simples de usar, tem uma comunidade grande e ativa, porém tem grandes problemáticas, algumas delas são:
+    - Instalação sequencial de pacotes, o que aumenta o tempo de instalação;
+    - `npm audit`. [Nesta página](https://overreacted.io/npm-audit-broken-by-design/) uma pessoa muito frustrada explica porque isso é um problema.
+    - Erros graves que assustam, e que seriam possíveis apenas se um invasor tivesse total acesso a sua máquina.
 
-## NPM (Node Package Manager)
-O NPM é o gerenciador de pacotes padrão da runtime [Node.js](#comparação-de-runtimes-para-js). Ele é simples de usar, tem uma comunidade grande e ativa, porém tem grandes problemáticas, algumas delas são:
-- Instalação sequencial de pacotes, o que aumenta o tempo de instalação;
-- `npm audit`. [Nesta página](https://overreacted.io/npm-audit-broken-by-design/) uma pessoa muito frustrada explica porque isso é um problema.
-- Erros graves que assustam, e que seriam possíveis apenas se um invasor tivesse total acesso a sua máquina.
+    <div align="center"><img alt="Heaviest Objects in the Universe" src="https://cdn.prod.website-files.com/60c918a8dfeab0375d2ee879/65d5bbd63fda604a3973c982_ewSxB795GWGySjZL6CYznbCr8z3nhhlb_m-CjaTMqBTBSeTqTzj6LuJcoSMgMKhPwjRN2PWljZHZT8rY1XncuaawJASh24IVzokfEpEentRQFTMUCHXJCiMgUv0pKjF8KB6ZYc05GicLgv9JO6PH_Q.png" width="400px"></div>
 
-<div align="center"><img alt="Heaviest Objects in the Universe" src="https://cdn.prod.website-files.com/60c918a8dfeab0375d2ee879/65d5bbd63fda604a3973c982_ewSxB795GWGySjZL6CYznbCr8z3nhhlb_m-CjaTMqBTBSeTqTzj6LuJcoSMgMKhPwjRN2PWljZHZT8rY1XncuaawJASh24IVzokfEpEentRQFTMUCHXJCiMgUv0pKjF8KB6ZYc05GicLgv9JO6PH_Q.png" width="400px"></div>
-
-## PNPM (Performant Node Package Manager)
-Este é outro gerenciador de pacotes também do ambiente `Node.js`, todavia é uma alternativa mais eficiente. Seu diferencial é não baixar bibliotecas completas, mas somente as diferenças entre versões. No console, ele mostra quantos pacotes e quanto espaço de disco foram economizados. 
-
-Uma desvantagem que ele apresenta é não suportar todos os pacotes possíveis.
+- PNPM (Performant Node Package Manager)
+    - Este é outro gerenciador de pacotes também do ambiente `Node.js`, todavia é uma alternativa mais eficiente.
+    - Seu diferencial é não baixar bibliotecas completas, mas somente as diferenças entre versões. No console, ele mostra quantos pacotes e quanto espaço de disco foram economizados. 
+    - Uma desvantagem que ele apresenta é não suportar todos os pacotes possíveis do npm.
 
 # Arquitetura Nuvem Multitenant 🆚 Single-Tenant
 - É uma instância única de nuvem e infraestrutura construída para possibilitar múltiplos clientes (tenants) de nuvem, para compartilhar de modo eficiente recursos e computação numa nuvem privada ou pública.
@@ -218,6 +212,55 @@ Uma desvantagem que ele apresenta é não suportar todos os pacotes possíveis.
 - Geralmente são utilizados por outras aplicações web como fontes de dados.
 - Aplicação web != Serviço web.
 - Monolito X Microsserviços X Híbrido
+
+# Astro 💜🏝️
+O Astro é um gerador de site estático. Ele renderiza o site para HTML e CSS, reduzindo a quantidade de javascript enviada para o client-side. Dá suporte para vários frameworks.
+
+## Island Architecture
+
+O Astro utiliza a arquitetura de ilhas (island architecture), o que também é chamado de hidratação parcial. 
+Cabe dizer que hidratação é o processo de injetar dados num objeto que foi instanciado sem nenhum dado, mas, no caso de páginas web, é a adição de comportamento JavaScript ao HTML.
+
+Nesse sentido, a arquitetura em questão consiste em tratar componentes de uma página como ilhas (pedaços, chunks) de interatividade, que podem ser hidratadas de maneira independente, permitindo que o restante da página seja HTML estático. Tal abordagem tem o objetivo de reduzia o volume de JavaScript enviado para o client-side, seguindo a filosofia do [[lean_dev_web]].
+
+
+![](https://res.cloudinary.com/ddxwdqwkr/image/upload/f_auto/v1633284886/patterns.dev/theislandsarch--avuxy9rrkk8.png)
+
+## Principais Aspectos do Astro
+- Em `public` ficam os assets que serão utilizados no projeto.
+- Existe um objeto global, que a plataforma oferece, chamado `Astro`, que dá acesso a atributos e métodos interessantes para a interação com requisições e a aplicação em si.
+- É possível misturar componentes de diferentes frameworks de UI, como React, Vue e [Svelte](https://svelte.dev/docs/svelte/overview), por exemplo.
+- Um arquivo `.astro` tem duas partes: component script e component template. A parte de template é a parte visual, que permite HTML, por exemplo.
+- Page é um tipo especial de componente.
+- `Astro.url` é equivalente a fazer `new URL(Astro.request.url)`.
+- `request`  é um objeto Request padrão. Ele pode ser usado para obter a `url`, os `headers`, o `method` e o corpo da requisição (body). Para tanto, utilize `Astro.request.method`, `Astro.request.url`, `Astro.request.headers`.
+- `response` é um objeto padrão de `ResponseInit`.  Sua estrutura é composta por `status` (status numérico da resposta, p. ex. 200), `statusText` (mensagem de status associada ao código de status), `headers` (instância de `Headers` utilizada para definir os cabeçalhos HTTP da resposta). Sendo assim, `Astro.response` define esses três atributos para a resposta de uma página (com `.set('')`).
+- `Astro.redirect()` retorna um objeto Response que permite redirecionar para outra página e, opcionalmente, fornecer um código de status de resposta HTTP como um segundo parâmetro. O `return` deve, obrigatóriamente, ser uma página. 
+
+```typescript
+const params = new URL("https://example.com/?name=Jonathan%20Smith&age=18")
+  .searchParams;
+const name = params.get("name");
+const age = parseInt(params.get("age"));
+
+console.log(`name: ${name}`); // name: Jonathan Smith
+console.log(`age: ${age}`); // age: 18
+
+```
+
+- O método `.entries()` está presente em estruturas de dados mais complexas que um array, e retorna um iterador permitindo iteração através de todos os pares chave/valor contidos nesse objeto. Os pares chave/valor aparecem na mesma ordem que na string query. Tanto a key quanto o value são strings. Não há parâmetros.  
+```typescript
+// Create a test URLSearchParams object
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
+
+// Display the key/value pairs
+for (const [key, value] of searchParams.entries()) {
+  console.log(`${key}, ${value}`);
+}
+```
+-  O método estático `Object.fromEntries()` transforma uma lista de pares key-value num objeto.
+- Por baixo dos panos, o Astro faz uso do [Vite](https://vite.dev/). Ele é a melhor ferramenta para fazer um SPA.
+- Lá no arquivo de configuração, o `astro.config.mjs`, tem um atributo no `defineConfig` chamado `output`. O valor padrão dele é `static`, porém geralmente, nas aplicações da cento.software, a gente muda para `server`, porque são aplicações dinâmicas, não estáticas. O Astro é uma base para aplicações estáticas, então fazemos essa alteração no `output` e sempre que precisarmos construir uma página estática, nós adicionamos uma exoprtação ao arquivo para tanto: `export const prerender = true`. É importante diferenciar aquilo que é estático daquilo que é dinâmico.
 
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ff5733&height=120&section=footer"/>

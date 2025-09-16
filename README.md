@@ -19,4 +19,10 @@ Recomendo a utilização da extensão [Foam](https://foambubble.github.io/foam/)
 
 ![texto](./media/foam_graph.gif)
 
-[Siga-me no GitHub](https://github.com/SorayaFerreira) ♥️
+<details>
+<summary><b>Clique e...</b></summary>
+
+📎 [siga-me no GitHub](https://github.com/SorayaFerreira) 
+</details>
+
+

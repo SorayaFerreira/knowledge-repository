@@ -251,7 +251,5 @@ class SistemaControleProjetores {
 ```
 
 - O problema surge se você quiser executar a mesma ação para todos os objetos (projetores) independente de apresentarem características diferentes.           
--  
-
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=ee82ee&height=120&section=footer"/>
