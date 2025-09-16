@@ -5,9 +5,16 @@ pubDate: Set 14 2025
 tags:
   - Manutenção de Software
 ---
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=f2c438&height=120&section=header"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=5f161c&height=120&section=header"/>
 
 # Sumário
+- [Conceitos Fundamentais](#conceitos-fundamentais)
+- [Tipos de Manutenção](#tipos-de-manutenção)
+- [Leis de Lehman](#leis-de-lehman)
+- [Técnicas da Manutenção](#técnicas-da-manutenção)
+- [Modelos de Manutenção](#modelos-de-manutenção)
+- [Fatores de Compreensão](#fatores-de-compreensão)
+- [Métricas](#métricas)
 
 # Conceitos Fundamentais
 - Manutenção: manter, sustentar, consertar, conservar, refatorar e evoluir.
@@ -35,8 +42,6 @@ tags:
 - **Conservação da estabilidade organizacional;**
 - **Conservação de familiaridade;**
 - **Sistema de feedback;**
-
-# Processos de Manutenção
 
 # Técnicas da Manutenção
 - **Reengenharia**: reconstrução de um software já existente, igual foi o caso do SigFap.
@@ -68,4 +73,4 @@ Atividades e técnicas específicas da manutenção:
 
 
 
-<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=f2c438&height=120&section=footer"/>
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=5f161c&height=120&section=footer"/>
