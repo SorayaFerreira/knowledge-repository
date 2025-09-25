@@ -63,6 +63,17 @@ Atividades e técnicas específicas da manutenção:
 - Aceitação/rejeição da solicitação de mudança: processo de avaliar e decidir se uma solicitação de mudança será implementada ou não.
 - VVT e GCS são atividades de suporte à manutenção.
 
+Fatores que dificultam a compreensão de programas:
+- Baixa qualidade de código;
+- Baixa legibilidade;
+- Alta complexidade;
+- Profundidade de aninhamento;
+- Comentários ruins;
+- Ausência de padrões de projeto;
+- Baixa qualidade de documentação;
+- Conhecimento e experiência do desenvolvedor;
+- Conhecimento sobre o domínio.
+
 # Métricas
 - Fan-in: número de funções que chamam um dada função, ou número de módulos externos que dependem de determinado módulo.
 - Fan-out: número de funções chamadas por uma dada função, ou número de módulos dos quais um determinado módulo depende.
