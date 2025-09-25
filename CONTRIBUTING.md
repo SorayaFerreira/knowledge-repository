@@ -7,13 +7,13 @@ Embora ele seja direcionado a um estudo individual, todas as contribuições sã
 
 ### 💻📚 Como contribuir 
 
-1. **Fork:** Crie um fork deste repositório em sua conta do GitHub.
-2. **Clone:** Clone o fork em sua máquina.
-3. **Crie um novo branch:** Crie um novo branch para cada nova feature ou correção de bug. 
-4. **Faça suas alterações:** Edite os arquivos conforme necessário.
-5. **Commit:** Faça commit das suas alterações, seguindo o padrão estabelecido.
-6. **Push:** Envie suas alterações para o seu fork remoto.
-7. **Crie um Pull Request:** Crie um Pull Request para o branch main do repositório, descrevendo as alterações.
+1. Crie um fork deste repositório em sua conta do GitHub.
+2. Clone o fork em sua máquina.
+3. Crie um novo branch para cada nova feature ou correção de bug. 
+4. Edite os arquivos conforme necessário.
+5. Faça commit das suas alterações, seguindo o padrão estabelecido.
+6. Envie suas alterações para o seu fork remoto.
+7. Crie um Pull Request para o branch main do repositório, descrevendo as alterações.
 
 
 ## 📑📃 Convenções de Documentação   
@@ -34,10 +34,10 @@ A organização que desenvolvemos ataca alguns problemas que são listados abaix
 3. Em certos casos, é desejável direcionar a leitura de um documento para um título específico em outro documento, o que não é viável no estado atual.
 4. Colocar arquivos executáveis – geralmente de exercícios – dentro de um diretório junto com os documentos `.md` dificulta o acesso e a execução do código dos exercícios 
 
-- Para tanto, apresentamos a seguinte **Solução** 🧪
+Para tanto, apresentamos a seguinte **Solução** 🧪
 
 **1.** A fim de garantir que novos conhecimentos sejam incluídos no repositório, mesmo em momentos offline, foi adotado o uso de um arquivo chamado `temporary.md`, na raiz do projeto. Tal arquivo deverá guardar temporariamente tópicos e links com referências para serem adicionados ao repositório. 
-> O `temporary.md` é onde ficam as sementes. 🫛
+> O `temporary.md` é onde ficam as sementes 🫛
 
 **2.** Os documentos `.md` com conteúdo didático serão melhor distribuídos. No diretório raiz haverá três diretórios centrais: `./exercises`, `./content`, e `./media`, tendo como inspirações jardins digitais como o do [Steph Ango](https://stephango.com/). 
 > Esses 3 são as espécies de plantas 🍅🫘🌳
